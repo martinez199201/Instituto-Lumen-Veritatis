@@ -1,0 +1,177 @@
+/* ==============================
+   FUENTES
+============================== */
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ==============================
+   VARIABLES DE COLOR
+============================== */
+:root {
+  --azul-institucional: #1F3A8A;
+  --dorado-institucional: #FFD700;
+  --gris-claro: #f8f9fa;
+}
+
+/* ==============================
+   BODY
+============================== */
+body {
+  font-family: 'Momo Trust Display', 'Montserrat', sans-serif;
+  color: #333;
+  background-color: var(--gris-claro);
+}
+
+/* ==============================
+   TITULOS
+============================== */
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--azul-institucional);
+}
+
+/* ==============================
+   NAV TABS
+============================== */
+.nav-tabs {
+  border-bottom: 3px solid var(--azul-institucional);
+}
+
+.nav-tabs .nav-link {
+  font-weight: 500;
+  color: var(--azul-institucional);
+  transition: 0.3s;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: var(--azul-institucional);
+  color: #fff;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--dorado-institucional);
+  color: var(--azul-institucional);
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ==============================
+   TARJETAS
+============================== */
+.card, .card-semestre {
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.card:hover, .card-semestre:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.card-icon i {
+  font-size: 2rem;
+  color: var(--azul-institucional);
+  margin-bottom: 0.5rem;
+}
+
+/* ==============================
+   BOTONES
+============================== */
+.btn-primary-custom {
+  background-color: var(--azul-institucional);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.65rem 1.5rem;
+  border: none;
+  transition: all 0.3s;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--dorado-institucional);
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   PERFIL EGRESO
+============================== */
+#perfil i {
+  transition: transform 0.3s, color 0.3s;
+}
+
+#perfil i:hover {
+  color: var(--dorado-institucional);
+  transform: scale(1.2);
+}
+
+/* ==============================
+   TABLAS
+============================== */
+table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+table th {
+  background-color: var(--azul-institucional);
+  color: #fff;
+}
+
+table td, table th {
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+  background-color: var(--azul-institucional);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--dorado-institucional);
+}
+
+/* ==============================
+   REDES SOCIALES
+============================== */
+.social-icon i {
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover i {
+  color: var(--dorado-institucional);
+  transform: scale(1.2);
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .btn-primary-custom {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .card, .card-semestre {
+    margin-bottom: 1rem;
+  }
+}

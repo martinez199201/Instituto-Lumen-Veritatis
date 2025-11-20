@@ -1,0 +1,462 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* ==============================
+  🎨 Paleta de colores
+============================== */
+:root {
+  --color-bg: #F5F7FA;
+  --color-navy: #1F3A8A;
+  --color-blue: #3B6DD7;
+  --color-gold: #D4A017;
+  --color-yellow: #FFC845;
+  --color-blue-light: #E7F0FF;
+  --color-text: #262626;
+}
+
+/* ==============================
+  ✍️ Tipografías
+============================== */
+body {
+  font-family: "Momo Trust Display", serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-navy);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+/* Fondo de la sección */
+#Misin {
+  background-color: #f5f7fa;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Contenedor Misión y Visión */
+.mission-vision-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Misión y Visión */
+.mission-box, .vision-box {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 6px solid var(--color-navy);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+}
+
+.mission-box {
+  animation-delay: 0.2s;
+}
+
+.vision-box {
+  animation-delay: 0.4s;
+}
+
+/* Animación fade-in */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Logo */
+.logo-nav {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin-right: 10px;
+  border-radius: 30px;
+  
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--color-navy) !important;
+  margin-right: 1rem;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--color-gold) !important;
+  border-bottom: 3px solid var(--color-gold);
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-blue) !important;
+  transform: translateY(-2px);
+}
+
+
+/* Toggler en mobile */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+span.fw-bold {
+  font-family: "Montserrat", sans-serif;
+  color:#1F3A8A;
+}
+
+.navbar{
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color:#F5F7FA;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
+  .navbar .btn-primary {
+    margin-top: 0.5rem;
+  }
+}
+
+
+
+/* ==============================
+  CAROUSEL
+============================== */
+.carousel-item img {
+  object-fit: cover;
+  height: 85vh;
+  width: 65vh;
+}
+
+.carousel-caption {
+  background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0));
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+}
+
+.carousel-caption h2 {
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: #fff;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 576px) {
+  .carousel-item img { height: 60vh; object-position: center; }
+  .carousel-caption { bottom: 15%; text-align: center !important; }
+  .carousel-caption h2 { font-size: 1.6rem; line-height: 1.2; }
+  .carousel-caption p { font-size: 0.95rem; margin-bottom: 0.8rem; }
+  .carousel-caption .btn { padding: 0.45rem 1.3rem; font-size: 0.9rem; }
+}
+
+/* ==============================
+  Misión y Visión
+============================== */
+.mission-vision-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.mission-box, .vision-box {
+  flex: 1 1 400px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 6px solid var(--color-navy);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-box:hover, .vision-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ==============================
+  Objetivo
+============================== */
+#Objetivo .bg-white {
+  max-width: 700px;
+  margin: auto;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#Objetivo .bg-white:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+#Objetiv p {
+  font-family: "Momo Trust Display", serif;
+  
+}
+/* ==============================
+  Botones generales
+============================== */
+button.btn, .btn {
+  background-color: var(--color-gold);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+button.btn:hover, .btn:hover {
+  background-color: #b38713;
+  transform: translateY(-2px);
+}
+
+a.btn-alianzas {
+  background-color: var(--color-blue);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+a.btn-alianzas:hover {
+  background-color: #2a4eb8;
+  transform: translateY(-2px);
+}
+
+/* Botón destacado institucional */
+.btn-primary-custom {
+  background: var(--color-navy); /* azul institucional */
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 12px;
+  border: none;
+  letter-spacing: 0.5px;
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover */
+.btn-primary-custom:hover {
+  background: var(--color-navy);
+  color:#3B6DD7;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+/* Active click */
+.btn-primary-custom:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsivo — más compacto en móviles */
+@media (max-width: 576px) {
+  .btn-primary-custom {
+    font-size: 1rem;
+    padding: 10px 22px;
+    border-radius: 10px;
+  }
+}
+
+
+
+p{
+  font-family: "Momo Trust Display", serif;
+}
+/* ==============================
+  Valores y tarjetas
+============================== */
+section .shadow-sm {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section .shadow-sm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.list-group-item {
+  border-radius: 10px !important;
+  margin-bottom: 8px;
+  background-color: #ffffff;
+  border: 1px solid #dfe6f0;
+  transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ==============================
+  Alianzas y oferta educativa
+============================== */
+.alianzas-img {
+  max-width: 350px;
+  max-height: 85px;
+  object-fit: contain;
+  margin: auto;
+}
+
+.oferta-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#oferta-educativa {
+  background: var(--color-blue-light);
+}
+
+/* ==============================
+  Hover para imágenes
+============================== */
+.hover-card img {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hover-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ==============================
+  Contacto y footer
+============================== */
+.contact-info p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.social-icon i {
+  transition: color 0.3s;
+}
+
+.social-icon:hover i {
+  color: var(--color-gold);
+}
+
+footer {
+  background-color: var(--color-navy);
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #fff;
+}
+
+footer .social-icon {
+  margin: 0 0.5rem;
+}
+
+footer a.social-icon i {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+  text-decoration: none;
+
+}
+
+footer a.social-icon:hover i {
+  color: var(--color-gold);
+}
+
+/* ==============================
+  Textos destacados
+============================== */
+.text-primary-custom {
+  color: var(--color-navy) !important;
+}
+
+section h2 {
+  font-weight: 700;
+  color: var(--color-navy);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section h5 {
+  font-weight: 600;
+  color: var(--color-blue);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+
+.btn.btn-warning {
+  background-color: var(--color-gold);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+}
+
+a.btn.btn-primary {
+  background-color: var(--color-navy);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+}
+
+a.btn .btn-primary{
+  background-color: var(--color-navy);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+}
